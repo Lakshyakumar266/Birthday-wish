@@ -1,89 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Happy Birthday, Samiksha! 🎉</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-<!-- A special birthday wish for Samiksha -->
+  <head>
+    <meta charset="UTF-8" />
+    <title>Happy Birthday, Samiksha! 🎉</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap"
+    />
+    <link rel="icon" type="image/png" href="./icon.svg" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- A special birthday wish for Samiksha -->
 
-<div class="paper heart">
-  <!-- No text in this heart paper -->
-</div>
+    <div class="paper heart">
+      <!-- No text in this heart paper -->
+    </div>
 
-<div class="paper image">
-  <p>Hey Savage Girl,</p>
-  <p>You're getting more awesome every year! 😎</p>
-  <img src="images/10.jpeg" alt="Birthday Image 1" />
-</div>
+    <div class="paper image">
+      <div>
+        <p>Hey Savage Girl,</p>
+        <p>You're getting more awesome every year! 😎</p>
+      </div>
+      <img src="./images/imresizer-1728415362963.jpg" alt="Birthday Image 1" />
+    </div>
 
-<div class="paper image">
-  <p>Hope your day was full of</p>
-  <p>fun, laughs, and crazy adventures! 🎂🎈</p>
-  <img src="images/20.jpeg" alt="Birthday Image 2" />
-</div>
+    <div class="paper image">
+      <div>
+        <p>Hope your day was full of</p>
+        <p>fun, laughs, and crazy adventures! 🎂🎈</p>
+      </div>
+      <img src="./images/272151602_265496089006052_7890653148248065699_n.jpg" class="image-2" alt="Birthday Image 2" />
+    </div>
 
-<div class="paper image">
-  <p>You're truly one of a kind,</p>
-  <p>and you know it, Savage Girl! ❤️</p>
-  <img src="images/30.jpg" alt="Birthday Image 3" />
-</div>
+    <div class="paper image">
+      <div>
+        <p>You're truly one of a kind,</p>
+        <p>and you know it, Savage Girl! ❤️</p>
+      </div>
+      <img src="./images/imresizer-1728416370284.jpg" alt="Birthday Image 3" />
+    </div>
 
-<div class="paper red">
-  <p class="p1">Stay fierce,</p>
-  <p class="p2">and keep being YOU! 🔥</p>
-</div>
+    <div class="paper red">
+      <p class="p1">Stay fierce,</p>
+      <p class="p2">and keep being YOU! 🔥</p>
+    </div>
 
-<div class="paper">
-  <p class="p1">Happy Birthday, Samiksha! 🎂</p>
-  <p class="p1">Keep shining, Savage Girl! ✨</p>
-</div>
+    <div class="paper">
+      <p class="p1">Happy Birthday, Samiksha! 🎂</p>
+      <p class="p1">Keep shining, Savage Girl! ✨</p>
+    </div>
 
-<div class="paper">
-  <p class="p1">P.S. Drag the papers around for some fun!</p>
-</div>
+    <div class="paper">
+      <p class="p1">P.S. Drag the papers around for some fun!</p>
+    </div>
 
-<audio id="background-music" autoplay loop>
-  <source src="bensound-dreams.mp3" type="audio/mpeg">
+    <audio id="background-music" autoplay loop>
+  <source src="./bensound-tenderness.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
+    <!-- Add a button for user interaction to start the music -->
+    <button id="play-music" style="display: none">Play Background Music</button>
 
-<script>
-  
-  const music = document.getElementById('background-music');
+    <script>
+      const music = document.getElementById('background-music');
+      const playButton = document.getElementById('play-music');
 
-    // Volume control
-    music.volume = 0.2;
+      // Volume control
+      music.volume = 0.2;
 
-    // Function to start music after user interaction
-    function startMusic() {
-      music.play();
-      document.removeEventListener('click', startMusic);
-      document.removeEventListener('keydown', startMusic);
-      document.removeEventListener('touchstart', startMusic);
-    }
+      // Function to start music after user interaction
+      function startMusic() {
+        music.play();
+        // playButton.style.display = 'none'; // Hide the button after it’s clicked
+        document.removeEventListener('click', startMusic);
+        document.removeEventListener('keydown', startMusic);
+        document.removeEventListener('touchstart', startMusic);
+      }
 
-    // Listen for any interaction: click, keydown, or touchstart to play the music
-    document.addEventListener('click', startMusic);
-    document.addEventListener('keydown', startMusic);
-    document.addEventListener('touchstart', startMusic);
+      // Listen for any interaction: click, keydown, or touchstart to play the music
+      document.addEventListener('click', startMusic);
+      document.addEventListener('keydown', startMusic);
+      document.addEventListener('touchstart', startMusic);
 
+      // To help in case autoplay fails, show a fallback button for mobile devices
+      // setTimeout(() => {
+      //   if (music.paused) {
+      //     playButton.style.display = 'block';
+      //   }
+      // }, 2000);
 
-  // Check the user agent to detect if it's a mobile device or desktop
-  if (/Mobi|Android/i.test(navigator.userAgent)) {
-    // Load mobile.js if it's a mobile device
-    var script = document.createElement('script');
-    script.src = './mobile.js';
-    document.body.appendChild(script);
-  } else {
-    // Load script.js if it's a desktop
-    var script = document.createElement('script');
-    script.src = './script.js';
-    document.body.appendChild(script);
-  }
-</script>
-</body>
+      // Check the user agent to detect if it's a mobile device or desktop
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+        // Load mobile.js if it's a mobile device
+        var script = document.createElement("script");
+        script.src = "./mobile.js";
+        document.body.appendChild(script);
+      } else {
+        // Load script.js if it's a desktop
+        var script = document.createElement("script");
+        script.src = "./script.js";
+        document.body.appendChild(script);
+      }
+    </script>
+  </body>
 </html>

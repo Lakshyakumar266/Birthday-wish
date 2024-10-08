@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 
-
-
-
 body {
   height: 100vh;
   display: flex;
@@ -37,14 +34,22 @@ body {
 
 .paper.image {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.paper.image p {
-  font-size: 30px;
+.paper.image .image-2 {
+  height: 200px;
+  /* width: 400px; */
+}
+.paper.image div p {
+  font-size: 25px;
   font-weight: bold;
+  
 }
 img {
-  max-height: 200px;
-  width: 100%;
+  height: 200px;
   user-select: none;
 }
 
@@ -56,7 +61,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  transform: rotateZ(3deg);
+  transform: rotate(0)!important;
   background-size: 150px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -70,5 +75,5 @@ p {
   opacity: 0.85;
   user-select: none;
   
-  /* // filter: drop-shadow(2px 1.5px 1px rgba(0,0,105,0.9)); */
+ /* filter: drop-shadow(2px 1.5px 1px rgba(0,0,105,0.9)); */
 }

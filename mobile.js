@@ -87,3 +87,13 @@ papers.forEach(paper => {
   const p = new Paper();
   p.init(paper);
 });
+
+function randomRotation() {
+  return Math.floor(Math.random() * 30) - 15; // Generates a random number between -15 and 15
+}
+
+// Apply random rotation to all elements with class 'paper'
+document.querySelectorAll('.paper').forEach(function(paper) {
+  const randomAngle = randomRotation();
+  paper.style.transform = `rotate(${randomAngle}deg)`;
+});
