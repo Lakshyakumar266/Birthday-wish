@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday, Samiksha! 🎉</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- A special birthday wish for Samiksha -->
+
+<div class="paper heart">
+  <!-- No text in this heart paper -->
+</div>
+
+<div class="paper image">
+  <p>Hey Savage Girl,</p>
+  <p>You're getting more awesome every year! 😎</p>
+  <img src="images/1.jpeg" alt="Birthday Image 1" />
+</div>
+
+<div class="paper image">
+  <p>Hope your day was full of</p>
+  <p>fun, laughs, and crazy adventures! 🎂🎈</p>
+  <img src="images/2.jpeg" alt="Birthday Image 2" />
+</div>
+
+<div class="paper image">
+  <p>You're truly one of a kind,</p>
+  <p>and you know it, Savage Girl! ❤️</p>
+  <img src="images/3.jpg" alt="Birthday Image 3" />
+</div>
+
+<div class="paper red">
+  <p class="p1">Stay fierce,</p>
+  <p class="p2">and keep being YOU! 🔥</p>
+</div>
+
+<div class="paper">
+  <p class="p1">Happy Birthday, Samiksha! 🎂</p>
+  <p class="p1">Keep shining, Savage Girl! ✨</p>
+</div>
+
+<div class="paper">
+  <p class="p1">P.S. Drag the papers around for some fun!</p>
+</div>
+
+<audio id="background-music" autoplay loop>
+  <source src="bensound-dreams.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+<script>
+  
+  const music = document.getElementById('background-music');
+
+    // Volume control
+    music.volume = 0.2;
+
+    // Function to start music after user interaction
+    function startMusic() {
+      music.play();
+      document.removeEventListener('click', startMusic);
+      document.removeEventListener('keydown', startMusic);
+      document.removeEventListener('touchstart', startMusic);
+    }
+
+    // Listen for any interaction: click, keydown, or touchstart to play the music
+    document.addEventListener('click', startMusic);
+    document.addEventListener('keydown', startMusic);
+    document.addEventListener('touchstart', startMusic);
+
+
+  // Check the user agent to detect if it's a mobile device or desktop
+  if (/Mobi|Android/i.test(navigator.userAgent)) {
+    // Load mobile.js if it's a mobile device
+    var script = document.createElement('script');
+    script.src = './mobile.js';
+    document.body.appendChild(script);
+  } else {
+    // Load script.js if it's a desktop
+    var script = document.createElement('script');
+    script.src = './script.js';
+    document.body.appendChild(script);
+  }
+</script>
+</body>
+</html>
